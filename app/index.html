@@ -3,9 +3,10 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <body ng-app="smarketApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>SmartMarket - Saving you money!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -18,14 +19,140 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="smarketApp">
+  
+<header>
+	    <div class="container">
+	        <div class="row">
+
+	        	<!-- Logo -->
+	            <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
+	            	<div class="well logo">
+	            		<a href="index.html">
+	            			Smart<span>Market</span>
+	            		</a>
+	            		<div>Saving you money!</div>
+	            	</div>
+	            </div>
+	            <!-- End Logo -->
+
+				<!-- Search Form -->
+	            <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
+	            	<div class="well">
+	                    <form action="">
+	                        <div class="input-group">
+	                            <input type="text" class="form-control input-search" ng-model="query" placeholder="Search...">
+	                        </div>
+	                    </form>
+	                </div>
+	            </div>
+	            <!-- End Search Form -->
+
+	            <!-- Shopping Cart List -->
+	            <div class="col-lg-3 col-md-4 col-sm-5">
+	                <div class="well">
+	                    <div class="btn-group btn-group-cart">
+	                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="pull-left"><i class="fa fa-shopping-cart icon-cart"></i></span>
+                                <span class="pull-left">Shopping Cart: 3 item(s)</span>
+                                <span class="pull-right"><i class="fa fa-caret-down"></i></span>
+                            </button>
+                            <ul class="dropdown-menu cart-content" role="menu">
+                                <li>
+                                    <a href="detail.html">
+                                        <b>T-BONE STEAK.</b>
+                                        <span>x1 $28.96</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="detail.html">
+                                        <b>NATREL FINE-FILTERED MILK. 1%</b>
+                                        <span>x1 $4.99 </span>
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="detail.html">
+                                        <b>ASTRO YOGOURT.</b>
+                                        <span>x1 $1.99</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="cart.html">Total: $35.94</a></li>
+                            </ul>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- End Shopping Cart List -->
+	        </div>
+	    </div>
+    </header>
+	
+	<nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- text logo on mobile view -->
+                <a class="navbar-brand visible-xs" href="index.html">Smart Market</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="active">Food Basics</a></li>
+                    <li><a href="#nofrills">No Frills</a></li>
+                    <li><a href="#metro">Metro</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container main-container" ng-view></div>
 
+	<footer>
+    	<div class="container" >
+        	<div class="col-lg-3 col-md-3">
+        		<div class="column">
+        			<h4>Information</h4>
+        			<ul>
+        				<li><a href="#">About Us</a></li>
+        				<li><a href="#">Policy Privacy</a></li>
+        				<li><a href="#">Terms and Conditions</a></li>
+        			</ul>
+        		</div>
+        	</div>     	
+        	<div class="col-lg-3 col-md-3">
+        		<div class="column">
+        			<h4>Customer Service</h4>
+        			<ul>
+        				<li><a href="#">Contact Us</a></li>
+        				<li><a href="#">Email: johnnykam16@gmail.com</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 col-md-3">
+        		<div class="column">
+        			<h4>Follow Us</h4>
+        			<ul class="social">
+        				<li><a href="#">Google Plus</a></li>
+        				<li><a href="#">Facebook</a></li>
+        				<li><a href="#">Twitter</a></li>
+        				<li><a href="#">RSS Feed</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+        <div class="navbar-inverse text-center copyright">
+        	Copyright &copy; 2013 SmartMarket All right reserved
+        </div>
+    </footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -5,7 +5,7 @@ angular.module('smarketApp')
 	
 	
 	$scope.getFB = function(){
-	$http({method:'GET', url:'http://localhost/API/api.php?method=getFB'}).success(function(data, status, headers){
+	$http({method:'GET', url:'http://defyent.com/Johnny/API/api.php?method=getFB'}).success(function(data, status, headers){
 		
 		// var jArr =data;
 		// console.log(jArr);
@@ -23,7 +23,7 @@ angular.module('smarketApp')
 	}
 	
 	$scope.getNoFrills = function(){
-		$http({method:'GET', url:'http://localhost/API/api.php?method=getNoFrills'}).success(function(data, status, headers){
+		$http({method:'GET', url:'http://defyent.com/Johnny/API/api.php?method=getNoFrills'}).success(function(data, status, headers){
 		$scope.posts = data;
 		//console.log(data);
 		$scope.status = status;
@@ -31,18 +31,16 @@ angular.module('smarketApp')
 	}
 	
 	$scope.getMetro = function(){
-		$http({method:'GET', url:'http://localhost/API/api.php?method=getMetro'}).success(function(data, status, headers){
+		$http({method:'GET', url:'http://defyent.com/Johnny/API/api.php?method=getMetro'}).success(function(data, status, headers){
 		$scope.posts = data;
 		//console.log(data);
 		});
 	}
-	
 	// $scope.searchFilter = function ($scope.posts){
 		// console.log($scope.posts);
 		// var keyword = new RegExp($scope.nameFilter, 'i');
 		// return !$scope.nameFilter 
 	// }
-	
 
 	$scope.getFB();
 	$scope.getNoFrills();

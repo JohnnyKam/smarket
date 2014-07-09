@@ -1,36 +1,31 @@
-<div class="header">
+<!-- <style>
+   table {border-collapse:collapse; table-layout:fixed; width:310px;}
+   table td {border:solid 1px #fab; width:700px; word-wrap:break-word;}
+</style> -->
+
+<!-- <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
+    <li class="active"><a ng-href="#">Food Basics</a></li>
+    <li><a ng-href="#nofrills">No Frills</a></li>
     <li><a ng-href="#">Contact</a></li>
   </ul>
-  <h3 class="text-muted">smarket</h3>
-</div>
+  <h3 class="text-muted">sMarket</h3>
+</div> -->
 
-<div ng-controller="getProducts">
-	{{data}}
-	Status: {{status}}
+
+<div class="main-container"ng-controller="getFB">
 	<p>
-	<table  style="width:700px">
+	<table  align="center" style="width:700px">
 		<tr>
-			<td><h4>Name</h4></td>
-			<td align="center"><h4>Price</h4></td>
+			<th><a href="" ng-click="predicate = 'name'; reverse=false">Name</a></th>
+			<th><a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a></th>
+		</tr>
+		<tr ng-repeat="p in ps  | filter: query | orderBy:predicate:reverse">
+			<td>{{p.name.trim()}}</td>
+			<td align="left">{{p.price.trim()}}</td>
 		</tr>
 	</table>
-	<div ng-repeat="post in posts">
-		<table  style="width:700px">
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		 <tr>
-			<td>{{post.name}}</td>
-			<td align="left">{{post.price}}</td>
-		</tr>
-	</table>
-	</div>
 </div>
 
-<div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-</div>
+
+

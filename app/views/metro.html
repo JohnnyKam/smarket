@@ -1,0 +1,16 @@
+<div ng-controller="getMetro">
+	<table  style="width:700px">
+		<tr>
+			<th><a href="" ng-click="predicate = 'Name'; reverse=false">Name</a></th>
+			<th><a href="" ng-click="predicate = 'Price'; reverse=!reverse">Price</a></th>
+			<th><a href="" ng-click="predicate = 'Savings'; reverse=!reverse">Savings</a></th>
+			<th><a href="" ng-click="predicate = 'Category'; reverse=false">Category</a></th>
+		</tr>
+		<tr ng-repeat="post in posts  | filter: query | orderBy:predicate:reverse">
+			<td>{{post.Title.trim()}}</td>
+			<td>{{post.Price.trim()}}</td>
+			<td align="left">{{post.Savings.trim()}}</td>
+			<td>{{post.Category.trim()}}</td>
+		</tr>
+	</table>
+</div>

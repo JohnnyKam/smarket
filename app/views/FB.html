@@ -1,0 +1,14 @@
+<div ng-controller="getFB" ng-view>
+	Status: {{status}}
+	<p>
+	<table  style="width:700px">
+		<tr>
+			<th><a href="" ng-click="predicate = 'name'; reverse=false">Name</a></th>
+			<th><a href="" ng-click="predicate = 'price'; reverse=!reverse">Price</a></th>
+		</tr>
+		<tr ng-repeat="p in posts  | filter: query | orderBy:predicate:reverse">
+			<td>{{p.name.trim()}}</td>
+			<td align="left">{{p.price.trim()}}</td>
+		</tr>
+	</table>
+</div>
